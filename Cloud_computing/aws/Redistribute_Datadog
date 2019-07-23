@@ -1,6 +1,0 @@
-# Amazon Web Services
-for WORKERIP in `sudo grep -i privateip /mnt/var/lib/info/*.txt | sort -u | cut -d "\"" -f 2`
-do
-   # Install data dog in worker nodes
-   ssh hadoop@${WORKERIP} "DD_API_KEY=e5c74a4d3c394e204f9256402ae42880 bash -c \"\$(curl -L https://raw.githubusercontent.com/DataDog/datadog-agent/master/cmd/agent/install_script.sh)\""
-done
